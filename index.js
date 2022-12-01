@@ -13,10 +13,19 @@ algorithm:
 output:
   - in ra màn hình 3 số có giá trị tăng dần
 */
+function main1() {
+  const so1 = document.getElementById("txt-so1");
+  const so2 = document.getElementById("txt-so2");
+  const so3 = document.getElementById("txt-so3");
+  if (so3.value == "" || so2.value == "" || so1.value == "") {
+    console.log(alert(`Hãy điền đầy đủ dữ liệu`));
+  } else xuat();
+}
 function xuat() {
   var so1EL = document.getElementById("txt-so1").value * 1;
   var so2EL = document.getElementById("txt-so2").value * 1;
   var so3EL = document.getElementById("txt-so3").value * 1;
+
   //3 gia tri tang dan
   var so1, so2, so3;
   var temp;
@@ -101,6 +110,26 @@ function checkEmgai() {
   person = "emgai";
 }
 function main2() {
+  if (person == "") {
+    console.log(alert(`Bạn chưa lựa chọn`));
+  } else {
+    switch (person) {
+      case "bo":
+        out2EL.innerHTML = "Chào Bố ạ";
+        break;
+      case "me":
+        out2EL.innerHTML = "Con chào Mẹ";
+        break;
+      case "emtrai":
+        out2EL.innerHTML = "Hey boy";
+        break;
+      case "emgai":
+        out2EL.innerHTML = "Hey girl";
+        break;
+      default:
+        out2EL.innerHTML = "No body";
+    }
+  }
   switch (person) {
     case "bo":
       out2EL.innerHTML = "Chào Bố ạ";
@@ -115,7 +144,7 @@ function main2() {
       out2EL.innerHTML = "Hey girl";
       break;
     default:
-      out2EL.innerHTML = "???";
+      out2EL.innerHTML = "No body";
   }
 }
 
@@ -145,6 +174,14 @@ function checkChanLe(x) {
   return 0;
 }
 function main3() {
+  const so1 = document.getElementById("1");
+  const so2 = document.getElementById("2");
+  const so3 = document.getElementById("3");
+  if (so3.value == "" || so2.value == "" || so1.value == "") {
+    console.log(alert(`Hãy điền đầy đủ dữ liệu`));
+  } else chanLe();
+}
+function chanLe() {
   const so1 = document.getElementById("1").value * 1;
   const so2 = document.getElementById("2").value * 1;
   const so3 = document.getElementById("3").value * 1;
@@ -166,11 +203,20 @@ function main3() {
     tongLe++;
   }
   const out3EL = (document.getElementById("output3").innerHTML =
-    "Tổng số chẳn : " + tongChan + "___Tổng số lẻ : " + tongLe);
+    "Tổng số chẳn : " + tongChan + " | Tổng số lẻ : " + tongLe);
 }
 
 /*
 ex4
+input:
+  + nhập chiều dài 3 cạnh của 1 tam giác
+algorithm:
+ + function ktTamGiac(a,b,c) dùng để kiểm tra 3 giá trị có phải là giá trị của 3 cạnh tam giác k
+ + function loaiTamGiac(a,b,c) dung để tìm loại tam giác
+    nếu:
+    - a=b or a=c or c=b return "tam giác cân"
+    -có 1 cạnh bất kì bình phương = tổng bình phương 2 cạnh còn lại return "tam giác vuông"
+    - a=b=c return "tam giác đều"
 */
 function reset4() {
   const xoa = "";

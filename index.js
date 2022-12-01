@@ -51,6 +51,12 @@ function reset1() {
 }
 /*
 ex2
+input:
+  + chọn người login
+algorithm:
+  + biến 
+output:
+  + ỉn ra lời chào tùy theo mỗi người
 */
 
 const checkBoEL = document.getElementById("checkYes-Bo");
@@ -68,7 +74,7 @@ function reset2() {
   checkEmGaiEL.style.opacity = "0";
   out2EL.innerHTML = "? - ? - ?";
 }
-function clickCheckbox(checkitem, login) {
+function clickCheckbox(checkitem) {
   checkBoEL.style.opacity = "0";
   checkMeEL.style.opacity = "0";
   checkEmGaiEL.style.opacity = "0";

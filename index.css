@@ -7,7 +7,7 @@
 .container {
     width: 50%;
     margin: 0 auto 0;
-    border: #f55f8d solid 2px;
+    border: #f55f8d solid 10px;
     border-radius: 20px;
     background-size: 200%;
 }
@@ -34,7 +34,7 @@ header {
 .ex input {
     width: 30%;
     margin: 10px;
-    border: #f55f8d solid 2px;
+    border: #d74470 solid 5px;
     border-radius: 10px;
     font-size: 20px;
 }

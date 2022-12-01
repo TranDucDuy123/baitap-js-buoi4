@@ -168,3 +168,43 @@ function main3() {
   const out3EL = (document.getElementById("output3").innerHTML =
     "Tổng số chẳn : " + tongChan + "___Tổng số lẻ : " + tongLe);
 }
+
+/*
+ex4
+*/
+function reset4() {
+  const xoa = "";
+  const in1 = (document.getElementById("canh1").value = xoa);
+  const in2 = (document.getElementById("canh2").value = xoa);
+  const in3 = (document.getElementById("canh3").value = xoa);
+  const out3EL = (document.getElementById("output4").innerHTML = "? - ? - ?");
+}
+function ktTamGiac(a, b, c) {
+  if (a + b <= c || a + c <= b || c + b <= a) {
+    console.log(alert("Không tồn tại tam giác này"));
+  }
+}
+function loaiTamGiac(a, b, c) {
+  if (a == b || a == c || c == b) {
+    return "tam giác cân";
+  } else if (a == b && a == c) {
+    return "tam giác đều";
+  } else if (
+    a * a == b * b + c * c ||
+    b * b == a * a + c * c ||
+    c * c == a * a + b * b
+  ) {
+    return "tam giác vuông";
+  } else return "tam giác khác";
+}
+function main4() {
+  const canh1 = document.getElementById("canh1").value * 1;
+  const canh2 = document.getElementById("canh2").value * 1;
+  const canh3 = document.getElementById("canh3").value * 1;
+  ktTamGiac(canh1, canh2, canh3);
+  const out4EL = (document.getElementById("output4").innerHTML = loaiTamGiac(
+    canh1,
+    canh2,
+    canh3
+  ));
+}

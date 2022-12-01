@@ -228,13 +228,14 @@ function reset4() {
 function ktTamGiac(a, b, c) {
   if (a + b <= c || a + c <= b || c + b <= a) {
     console.log(alert("Không tồn tại tam giác này"));
-  }
+  } else return 1;
+  return 0;
 }
 function loaiTamGiac(a, b, c) {
-  if (a == b || a == c || c == b) {
-    return "tam giác cân";
-  } else if (a == b && a == c) {
+  if (b == a && c == a) {
     return "tam giác đều";
+  } else if (a == c || a == b || c == b) {
+    return "tam giác cân";
   } else if (
     a * a == b * b + c * c ||
     b * b == a * a + c * c ||
@@ -243,14 +244,24 @@ function loaiTamGiac(a, b, c) {
     return "tam giác vuông";
   } else return "tam giác khác";
 }
-function main4() {
+function thucHien() {
   const canh1 = document.getElementById("canh1").value * 1;
   const canh2 = document.getElementById("canh2").value * 1;
   const canh3 = document.getElementById("canh3").value * 1;
-  ktTamGiac(canh1, canh2, canh3);
-  const out4EL = (document.getElementById("output4").innerHTML = loaiTamGiac(
-    canh1,
-    canh2,
-    canh3
-  ));
+
+  if (ktTamGiac(canh1, canh2, canh3) == 1) {
+    const out4EL = (document.getElementById("output4").innerHTML = loaiTamGiac(
+      canh1,
+      canh2,
+      canh3
+    ));
+  }
+}
+function main4() {
+  const so1 = document.getElementById("canh1");
+  const so2 = document.getElementById("canh2");
+  const so3 = document.getElementById("canh3");
+  if (so3.value == "" || so2.value == "" || so1.value == "") {
+    console.log(alert(`Hãy điền đầy đủ dữ liệu`));
+  } else thucHien();
 }

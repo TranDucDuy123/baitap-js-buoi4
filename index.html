@@ -19,6 +19,7 @@
     <header>
         <h1>Bài Tập JS Buổi 4</h1>
     </header>
+    <!-- cau 1 -->
     <section class="ex container">
         <div onclick="reset1()" class="refresh">
             <i class="fa-solid fa-rotate-right"></i>
@@ -29,7 +30,60 @@
         <input type="text" placeholder="Nhập số nguyên " id="txt-so3">
         <button onclick="xuat()" class="btn">Thực hiện</button>
         <div class="output">
-            <h2 id="kq">Kết Quả</h2>
+            <h2 id="kq1">Kết Quả</h2>
+            <p id="output1">? - ? - ?</p>
+        </div>
+    </section>
+    <!-- cau 2 -->
+    <section class="ex container">
+        <div onclick="reset2()" class="refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <h2>Bài tập 2</h2>
+        <div class="checkbox">
+            <h2 onclick="checkBo()" class="checkbox__item">
+                <i id="checkNo-Bo" class="fa-regular fa-circle">
+                    <i id="checkYes-Bo" class="fa-solid fa-circle"></i>
+                </i>
+                Bố
+            </h2>
+            <h2 onclick="checkMe()" class="checkbox__item">
+                <i id="checkNo-Me" class="fa-regular fa-circle">
+                    <i id="checkYes-Me" class="fa-solid fa-circle"></i>
+                </i>
+                Mẹ
+            </h2>
+            <h2 onclick="checkEmtrai()" class="checkbox__item">
+                <i id="checkNo-EmTrai" class="fa-regular fa-circle">
+                    <i id="checkYes-EmTrai" class="fa-solid fa-circle"></i>
+                </i>
+                Em Trai
+            </h2>
+            <h2 onclick="checkEmgai()" class="checkbox__item">
+                <i id="checkNo-EmGai" class="fa-regular fa-circle">
+                    <i id="checkYes-EmGai" class="fa-solid fa-circle"></i>
+                </i>
+                Em Gái
+            </h2>
+        </div>
+        <button onclick="main2()" class="btn">Chào</button>
+        <div class="output">
+            <h2 id="kq2">Kết Quả</h2>
+            <p id="output2">? - ? - ?</p>
+        </div>
+    </section>
+    <!-- cau 3 -->
+    <section class="ex container">
+        <div onclick="reset3()" class="refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <h2>Bài Tập 3</h2>
+        <input type="text" placeholder="Nhập số nguyên " id="1">
+        <input type="text" placeholder="Nhập số nguyên " id="2">
+        <input type="text" placeholder="Nhập số nguyên " id="2">
+        <button onclick="main3()" class="btn">Thực hiện</button>
+        <div class="output">
+            <h2 id="kq1">Kết Quả</h2>
             <p id="output1">? - ? - ?</p>
         </div>
     </section>
@@ -37,9 +91,9 @@
 
 
 
-
     <!-- my js -->
-    <script src="./index.js"></script>
+    <script src=" ./index.js">
+    </script>
 </body>
 
 </html>

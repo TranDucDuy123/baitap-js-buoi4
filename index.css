@@ -28,6 +28,7 @@ header {
     align-items: center;
     padding: 20px 0;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .ex input {
@@ -94,4 +95,49 @@ header {
 .btn:hover {
     background-position: right center;
     cursor: pointer;
+}
+
+.checkbox {
+    margin: 20px auto 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.checkbox h2 {
+    color: rgb(15, 189, 108);
+}
+
+
+.checkbox .checkbox__item {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#checkNo-Bo,
+#checkNo-Me,
+#checkNo-EmTrai,
+#checkNo-EmGai {
+    position: relative;
+    margin-right: 10px;
+    font-size: 40px;
+    color: black;
+
+}
+
+#checkYes-Bo,
+#checkYes-Me,
+#checkYes-EmTrai,
+#checkYes-EmGai {
+    position: absolute;
+    font-size: 28px;
+    top: 6px;
+    left: 6px;
+    opacity: 0;
+    color: #f55f8d;
 }

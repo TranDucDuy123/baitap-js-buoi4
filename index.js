@@ -6,10 +6,12 @@ algorithm:
   + tạo 3 viến so1,so2,so3 giả sử 3 số có giá trị tăng dần
   + so sánh so1EL,so2EL giá trị nào nhỏ thì gán cho so1, lớn hơn thì gán cho so2
   + so so sánh so3EL:
-    - nếu nhỏ hơn hoặc bằng thì 
-      temp = so1; so1 =so3EL; so3=so2; so2=temp
-    - nếu lớn hơn
+    - nếu nhỏ hơn hoặc bằng so1 thì 
+      so3=so2; so2=so1; so1=so1EL
+    - nếu lớn hơn or bằng số 2 thì
+      so3=so3EL
 output:
+  - in ra màn hình 3 số có giá trị tăng dần
 */
 function xuat() {
   var so1EL = document.getElementById("txt-so1").value * 1;
@@ -45,5 +47,65 @@ function reset1() {
   const so1 = (document.getElementById("txt-so1").value = xoa);
   const so2 = (document.getElementById("txt-so2").value = xoa);
   const so3 = (document.getElementById("txt-so3").value = xoa);
-  const outEL = (document.getElementById("output1").innerHTML = "? - ? - ?");
+  const out1EL = (document.getElementById("output1").innerHTML = "? - ? - ?");
+}
+/*
+ex2
+*/
+
+const checkBoEL = document.getElementById("checkYes-Bo");
+const checkMeEL = document.getElementById("checkYes-Me");
+const checkEmTraiEL = document.getElementById("checkYes-EmTrai");
+const checkEmGaiEL = document.getElementById("checkYes-EmGai");
+const out2EL = document.getElementById("output2");
+
+var person = "";
+
+function reset2() {
+  person = "";
+  checkBoEL.style.opacity = "0";
+  checkMeEL.style.opacity = "0";
+  checkEmGaiEL.style.opacity = "0";
+  out2EL.innerHTML = "? - ? - ?";
+}
+function clickCheckbox(checkitem, login) {
+  checkBoEL.style.opacity = "0";
+  checkMeEL.style.opacity = "0";
+  checkEmGaiEL.style.opacity = "0";
+  checkEmTraiEL.style.opacity = "0";
+  checkitem.style.opacity = "1";
+}
+function checkBo() {
+  clickCheckbox(checkBoEL);
+  person = "bo";
+}
+function checkMe() {
+  clickCheckbox(checkMeEL);
+  person = "me";
+}
+function checkEmtrai() {
+  clickCheckbox(checkEmTraiEL);
+  person = "emtrai";
+}
+function checkEmgai() {
+  clickCheckbox(checkEmGaiEL);
+  person = "emgai";
+}
+function main2() {
+  switch (person) {
+    case "bo":
+      out2EL.innerHTML = "Chào Bố ạ";
+      break;
+    case "me":
+      out2EL.innerHTML = "Con chào Mẹ";
+      break;
+    case "emtrai":
+      out2EL.innerHTML = "Hey boy";
+      break;
+    case "emgai":
+      out2EL.innerHTML = "Hey girl";
+      break;
+    default:
+      out2EL.innerHTML = "???";
+  }
 }

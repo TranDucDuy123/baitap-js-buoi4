@@ -54,9 +54,12 @@ ex2
 input:
   + chọn người login
 algorithm:
-  + biến 
+  + tạo biến peson để luu đối tượng login là ai
+  + tạo 4 thẻ h2: với mỗi function trả về giá trị khác nhau cho biến person
+  + dùng JS switch với 4 case : bo, me, emtrai, emgai
+  + kiểm tra biến person và in ra lời mời tùy theo các case
 output:
-  + ỉn ra lời chào tùy theo mỗi người
+  + in ra lời chào tùy theo mỗi người
 */
 
 const checkBoEL = document.getElementById("checkYes-Bo");
@@ -118,6 +121,16 @@ function main2() {
 
 /*
 ex3
+input:
+  + nhập 3 số nguyên
+algorithm:
+  + function checkChanLe() kiểm tra x: nếu chẵn return 1; lẻ return 0
+  + kiểm tra lần lượt so1 so2 so3 với function checkChanLe()
+  + mỗi lần checkChanLe()  trả về 1 thì tăng tongChan lên 1
+  + 2 biến tongChan, tongLe luu tổng số chẵn, tổng số lẻ
+  + mỗi lần checkChanLe()  trả về 1 thì tăng tongChan lên 1:
+  + mỗi lần checkChanLe()  trả về 0 thì tăng tongLe lên 1:
+
 */
 
 function reset3() {

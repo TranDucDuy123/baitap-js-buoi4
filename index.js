@@ -38,7 +38,7 @@ function xuat() {
     so2 = so3EL;
   }
 
-  outputEL = document.getElementById("output1");
+  var outputEL = document.getElementById("output1");
   var ketqua = so1 + " - " + so2 + " - " + so3;
   outputEL.innerHTML = ketqua;
 }
@@ -47,7 +47,7 @@ function reset1() {
   const so1 = (document.getElementById("txt-so1").value = xoa);
   const so2 = (document.getElementById("txt-so2").value = xoa);
   const so3 = (document.getElementById("txt-so3").value = xoa);
-  const out1EL = (document.getElementById("output1").innerHTML = "? - ? - ?");
+  const outputEL = (document.getElementById("output1").innerHTML = "? - ? - ?");
 }
 /*
 ex2
@@ -108,4 +108,44 @@ function main2() {
     default:
       out2EL.innerHTML = "???";
   }
+}
+
+/*
+ex3
+*/
+
+function reset3() {
+  const xoa = "";
+  const in1 = (document.getElementById("1").value = xoa);
+  const in2 = (document.getElementById("2").value = xoa);
+  const in3 = (document.getElementById("3").value = xoa);
+  const out3EL = (document.getElementById("output3").innerHTML = "? - ? - ?");
+}
+function checkChanLe(x) {
+  if (Math.floor(x % 2) == 0) return 1;
+  return 0;
+}
+function main3() {
+  const so1 = document.getElementById("1").value * 1;
+  const so2 = document.getElementById("2").value * 1;
+  const so3 = document.getElementById("3").value * 1;
+  var tongChan = 0,
+    tongLe = 0;
+  if (checkChanLe(so1) == 1) {
+    tongChan++;
+  } else {
+    tongLe++;
+  }
+  if (checkChanLe(so2) == 1) {
+    tongChan++;
+  } else {
+    tongLe++;
+  }
+  if (checkChanLe(so3) == 1) {
+    tongChan++;
+  } else {
+    tongLe++;
+  }
+  const out3EL = (document.getElementById("output3").innerHTML =
+    "Tổng số chẳn : " + tongChan + "___Tổng số lẻ : " + tongLe);
 }
